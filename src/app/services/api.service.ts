@@ -7,7 +7,8 @@ import { Options } from '../../types';
     providedIn: 'root',
 })
 export class ApiService {
-    constructor(private HttpClient: HttpClient) {}
+  constructor(private HttpClient: HttpClient) { }
+  
     get<T>(url: string, options: Options): Observable<T> {
         return this.HttpClient.get<T>(url, options) as Observable<T>;
     }
